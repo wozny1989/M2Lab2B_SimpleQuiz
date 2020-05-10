@@ -1,0 +1,34 @@
+<resources>
+  <string name="app_name">M3Lab2b_SimpleQuiz</string>
+  <string name="headerContent">QUIZ O SKOKACH NARCIARSKICH</string>
+
+  <string name="q1">W jakim sezonie/sezonach Kamil Stoch wygrał turniej 4 skoczni?</string>
+  <string name="q1a1">2016/2017</string>
+  <string name="q1a2">2017/2018</string>
+  <string name="q1a3">2018/2019</string>
+
+  <string name="q2">Który ze skoczków zakończył sezon na 1 miejscu i odebrał krysztalową kulę?</string>
+  <string name="q2a1">Adam Małysz</string>
+  <string name="q2a2">Piotr Żyła</string>
+  <string name="q2a3">Kamil Stoch</string>
+
+  <string name="q3">Jaka odległość jest aktualnie nieoficjalnym rekordem długości skoku?</string>
+  <string name="q3a1">247m</string>
+  <string name="q3a2">253.5m</string>
+  <string name="q3a3">252.5m</string>
+
+  <string name="q4">Który ze skoczków odnotował tą najdłuższą odległość z poprzedniego pytania?</string>
+  <string name="q4a1">Robert Kraniec</string>
+  <string name="q4a2">Adam Małysz</string>
+  <string name="q4a3">Stefan Kraft</string>
+
+  <string name="q5">Czy wygrany turnieju 4 skoczni w dalszym ciągu otrzymuję samochód marki AUDI?</string>
+  <string name="q5aOn">TAK</string>
+  <string name="q5aOff">NIE</string>
+
+  <string name="q6">Czy Adam Małysz zdobył złoto olimpijskie?</string>
+  <string name="q6a1">NIE/TAK</string>
+
+  <string name="checkAnswer">Sprawdź wyniki!</string>
+  <string name="clearAnswer">Spróbuj jeszcze raz!</string>
+</resources>
