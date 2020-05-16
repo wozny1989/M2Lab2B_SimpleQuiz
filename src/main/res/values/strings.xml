@@ -30,5 +30,5 @@
   <string name="q6a1">NIE/TAK</string>
 
   <string name="checkAnswer">Sprawdź wyniki!</string>
-  <string name="clearAnswer">Spróbuj jeszcze raz!</string>
+  <string name="clearQuiz">Spróbuj jeszcze raz!</string>
 </resources>
