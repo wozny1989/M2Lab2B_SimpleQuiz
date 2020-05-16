@@ -25,6 +25,6 @@
   </style>
 
   <style name="score">
-
+    <item name="android:textSize">25sp</item>
   </style>
 </resources>

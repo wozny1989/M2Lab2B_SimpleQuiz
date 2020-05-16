@@ -300,33 +300,6 @@
         </LinearLayout>
       </LinearLayout>
 
-    <LinearLayout
-      android:id="@+id/scoreWrapper"
-      style="@style/questionWrapper"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:gravity="center">
-
-      <TextView
-        android:id="@+id/scoreText"
-        style="@style/score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6/8"
-        tools:visibility="gone" />
-
-      <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="8"
-        android:progress="6"
-        tools:visibility="gone" />
-
-    </LinearLayout>
-
       <LinearLayout
         android:id="@+id/sumbitWrapper"
         style="@style/questionWrapper"

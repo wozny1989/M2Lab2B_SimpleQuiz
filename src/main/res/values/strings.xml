@@ -1,6 +1,7 @@
 <resources>
   <string name="app_name">M3Lab2b_SimpleQuiz</string>
   <string name="headerContent">QUIZ O SKOKACH NARCIARSKICH</string>
+  <string name="headerResultText">WYNIK:</string>
 
   <string name="q1">W jakim sezonie/sezonach Kamil Stoch wygrał turniej 4 skoczni?</string>
   <string name="q1a1">2016/2017</string>

@@ -2,6 +2,7 @@ package com.example.m3lab2b_simplequiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +12,6 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,11 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
   Button submitButton;
 
-  TextView scoreText;
-  ProgressBar progressBar;
-
   int sumPoints;
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -71,22 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
     submitButton = (Button) findViewById(R.id.submitButton);
 
-    scoreText = (TextView) findViewById((R.id.scoreText));
-    progressBar = (ProgressBar) findViewById((R.id.progressBar));
+    final Intent intent = new Intent(this, ResultActivity.class);
+
+    clearQuiz();
 
     submitButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        final String checkAnswerText = getResources().getString(R.string.checkAnswer);
-        final String clearQuizText = getResources().getString(R.string.clearQuiz);
-//        submitButton.setText(submitButton.getText().equals(checkAnswer) ? clearQuiz : checkAnswer);
-        if (submitButton.getText().equals(checkAnswerText)) {
-          submitButton.setText(clearQuizText);
-          checkAnswers();
-        } else {
-          submitButton.setText(checkAnswerText);
-          clearQuiz();
-        }
+        checkAnswers();
+        intent.putExtra("sumPoints", sumPoints);
+        startActivity(intent);
       }
     });
   }
@@ -106,12 +95,6 @@ public class MainActivity extends AppCompatActivity {
     if (!q5.isChecked()) { sumPoints++; }
 
     if (!q6.isChecked()) { sumPoints++; }
-    enableElements(false);
-
-    scoreText.setVisibility(View.VISIBLE);
-    progressBar.setVisibility(View.VISIBLE);
-    scoreText.setText(sumPoints + "/8");
-    progressBar.setProgress(sumPoints);
   }
 
   public void clearQuiz() {
@@ -134,31 +117,5 @@ public class MainActivity extends AppCompatActivity {
     q5.setChecked(false);
 
     q6.setChecked(false);
-
-    scoreText.setVisibility(View.GONE);
-    progressBar.setVisibility(View.GONE);
-    enableElements(true);
-  }
-
-  public void enableElements(boolean enabled) {
-    q1a1.setEnabled(enabled);
-    q1a2.setEnabled(enabled);
-    q1a3.setEnabled(enabled);
-
-    q2a1.setEnabled(enabled);
-    q2a2.setEnabled(enabled);
-    q2a3.setEnabled(enabled);
-
-    q3a1.setEnabled(enabled);
-    q3a2.setEnabled(enabled);
-    q3a3.setEnabled(enabled);
-
-    q4a1.setEnabled(enabled);
-    q4a2.setEnabled(enabled);
-    q4a3.setEnabled(enabled);
-
-    q5.setEnabled(enabled);
-
-    q6.setEnabled(enabled);
   }
 }
